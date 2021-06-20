@@ -1,0 +1,5 @@
+.popup__photo {
+  margin: 0 0 10px;
+  max-height: 75vh;
+  max-width: 75vw;
+}

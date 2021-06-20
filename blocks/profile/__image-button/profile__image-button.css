@@ -1,0 +1,13 @@
+.profile__image-button {
+  width: 10px;
+  height: 10px;
+  align-self: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__image-button {
+   width: 7.5px;
+   height: 7.5px;
+ }
+}

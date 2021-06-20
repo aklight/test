@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pages/index.css">
+  <title>MESTO</title>
+</head>
+<body class="page">
+  <header class="header">
+    <img src="images/logo.svg" alt="Логотип Mesto Russia" class="header__logo">
+  </header>
+  <main>
+    <section class="profile">
+      <div class="profile__information">
+        <img src="images/avatar.jpg" alt="Аватар" class="profile__avatar">
+        <div class="profile__info">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__edit-button" type="button"><img src="images/edit-button.png" alt="редактировать" class="profile__image-button" aria-label="Редактировать профиль"></button>
+          <p class="profile__description">Исследователь океана</p>
+        </div>
+      </div>
+     <button class="profile__add-button" type="button"> <img src="images/+.svg" alt="добавить" class="profile__plus" aria-label="Добавить карточку"></button>
+    </section>
+    <section class="elements">
+      <ul class="elements__list">
+      </ul>
+    </section>
+  </main>
+  <footer><p class="footer">&copy; 2020 Mesto Russia</p></footer>
+  <div class="popup popup-edit">
+    <div class="popup__container">
+      <button class="popup__close popup__close-edit" type="button" aria-label="Закрыть попап"></button>
+      <h3 class="popup__title">Рeдактировать профиль</h3>
+      <form action="#" class="popup__form popup__save" name="editProfile" method="POST" novalidate>
+        <label for="name-input" class="popup__label">
+          <input type="text" class="popup__input popup__input_string_name" id="name-input" placeholder="Ваше имя" name="name" minlength="2" maxlength="40" required>
+          <span id="name-input-error"></span>
+        </label>
+        <label for="subheading-input" class="popup__label">
+          <input type="text" class="popup__input popup__input_string_subheading" id="subheading-input" placeholder="Краткое описание профиля" name="subheading" minlength="2" maxlength="200" required>
+          <span id="subheading-input-error"></span>
+        </label>
+        <button class="popup__button" aria-label="Сохранить изменения" type="submit">Сохранить</button>
+    </form>
+    </div>
+  </div>
+  <div class="popup popup-add">
+    <div class="popup__container">
+      <button class="popup__close popup__close-add" type="button" aria-label="Закрыть попап"></button>
+      <h3 class="popup__title">Новое место</h3>
+      <form action="#" class="popup__form popup__create" name="addProfile" method="POST" novalidate>
+        <label for="title-input" class="popup__label">
+          <input type="text" class="popup__input popup__input_string_title" id="title-input" placeholder="Название" name="title" minlength="2" maxlength="30" required>
+          <span id="title-input-error"></span>
+        </label>
+        <label for="link-input" class="popup__label">
+          <input type="url" class="popup__input popup__input_string_link" id="link-input" placeholder="Ссылка на картинку" name="link" required>
+          <span id="link-input-error"></span>
+        </label>
+        <button class="popup__button" aria-label="Сохранить изменения" type="submit">Создать</button>
+    </form>
+    </div>
+  </div>
+  <div class="popup popup-image">
+    <div class="popup__visual">
+      <button class="popup__close popup__close-image" type="button" aria-label="Закрыть попап"></button>
+      <div class="popup__box">
+        <img  class="popup__photo" src="#" alt="#">
+        <h3 class="popup__subtitle"></h3>
+      </div>
+    </div>
+  </div>
+  <template class="elements-template">
+    <li class="element">
+      <img class="element__image" src="#" alt="#">
+      <button type="button" class="element__delete"></button>
+      <div class="element__group">
+        <h2 class="element__text"></h2>
+        <button type="button" class="element__like"></button>
+      </div>
+    </li>
+  </template>
+  <script src="scripts/script.js" ></script>
+  <script src="scripts/validate.js"></script>
+</body>
+</html>
